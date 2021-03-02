@@ -1,0 +1,47 @@
+﻿@model RaceTrack.ViewModels.AddVehicleViewModel
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>AddVehicle</title>
+</head>
+<body>
+    @using (Html.BeginForm("AddVehicle", "AddVehicle", FormMethod.Post))
+    {
+        <div class="form-group row">
+            <label for="ddlVehicleType" class="col-sm-2 col-form-label">Vehicle Type: </label>
+            @Html.EnumDropDownListFor(model => model.Vehicle.VehicleType, null, new { @id = "ddlVehicleType", @class = "form-control", @style = "width:100px;" })
+        </div>
+        <br />
+        <div class="form-group row">
+            <label for="TowStrap" class="col-sm-2 col-form-label">Tow Strap: </label>
+            @Html.RadioButtonFor(model => model.Vehicle.TowStrap, true, new { @checked = "true" }) Yes
+            @Html.RadioButtonFor(model => model.Vehicle.TowStrap, false) No
+        </div>
+        <br />
+        <div class="form-group row">
+            <label for="TruckLiftHeight" class="col-sm-2 col-form-label">Lift Height: </label>
+            @Html.TextBoxFor(model => model.TruckLiftHeight, new { @Value = 0 })
+        </div>
+        <br />
+        <div class="form-group row">
+            <label for="CarTireWear" class="col-sm-2 col-form-label">Tire Wear: </label>
+            @Html.TextBoxFor(model => model.CarTireWear, new { @Value = 0 })
+        </div>
+        <p>
+            <input type="submit" class="submit" value="Submit" />
+        </p>
+        <br />
+        <div>
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+
+</body>
+</html>

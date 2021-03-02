@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31005.135
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RaceTrack", "RaceTrack.csproj", "{82D56E53-5D38-489A-A226-3FFB1311F3DA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RaceTrackTest", "..\RaceTrackTest\RaceTrackTest.csproj", "{3501FE69-D8F4-4B39-BA2D-3EAE49DF9A6A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{82D56E53-5D38-489A-A226-3FFB1311F3DA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{82D56E53-5D38-489A-A226-3FFB1311F3DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{82D56E53-5D38-489A-A226-3FFB1311F3DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{82D56E53-5D38-489A-A226-3FFB1311F3DA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3501FE69-D8F4-4B39-BA2D-3EAE49DF9A6A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3501FE69-D8F4-4B39-BA2D-3EAE49DF9A6A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3501FE69-D8F4-4B39-BA2D-3EAE49DF9A6A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3501FE69-D8F4-4B39-BA2D-3EAE49DF9A6A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {32D87CD1-48A4-4268-9401-C6A178D0AEEA}
+	EndGlobalSection
+EndGlobal

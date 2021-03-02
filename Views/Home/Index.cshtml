@@ -1,0 +1,53 @@
+﻿@model RaceTrack.ViewModels.VehiclesOnTrackViewModel
+
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Race Track</title>
+</head>
+<body>
+    @using (Html.BeginForm("Remove", "Home", FormMethod.Post))
+    {
+        <table id="myTable" class="table" cellspacing="0">
+            <thead>
+                <tr>
+                    <th>Vehicle Id</th>
+                    <th>Vehicle Type</th>
+                    <th>Remove</th>
+                </tr>
+            </thead>
+            <tbody>
+                @if (Model.Vehicles.Count() == 0)
+                {
+                    <tr>
+                        <td colspan="3">No Vehicles on Track</td>
+                    </tr>
+                }
+                else
+                {
+                    <tr>
+                        @foreach (var property in Model.Vehicles)
+                        {
+                            <td>@property.Id</td>
+                            <td>@property.VehicleType</td>
+                            <td>@Html.CheckBox("remove", new { value = property.Id })</td>
+                        }
+                    </tr>
+                }
+                <tr>
+                    <td>Add vehicle to track</td>
+                    <td></td>
+                    <td><input type="submit" class="submit" value="Submit" /></td>
+                </tr>
+            </tbody>
+        </table>
+        <p>
+            
+        </p>
+    }
+</body>
+</html>
