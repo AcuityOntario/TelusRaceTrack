@@ -27,27 +27,32 @@
                         <td colspan="3">No Vehicles on Track</td>
                     </tr>
                 }
-                else
+                else if (Model.Vehicles.Count() > 0)
                 {
-                    <tr>
-                        @foreach (var property in Model.Vehicles)
-                        {
+                    foreach (var property in Model.Vehicles)
+                    {
+                        <tr>
+
                             <td>@property.Id</td>
                             <td>@property.VehicleType</td>
                             <td>@Html.CheckBox("remove", new { value = property.Id })</td>
-                        }
-                    </tr>
+                        </tr>
+                    }
                 }
-                <tr>
-                    <td>Add vehicle to track</td>
-                    <td></td>
-                    <td><input type="submit" class="submit" value="Submit" /></td>
-                </tr>
+            <tr>
+                @if (Model.Vehicles.Count() == Model.Vehicles.FirstOrDefault().TrackLimit)
+                {
+                    <td>Track Full</td>
+                }
+                else
+                {
+                    <td>@Html.ActionLink("Add vehicle to track", "AddVehicle", "AddVehicle")</td>
+                }
+                <td></td>
+                <td><input type="submit" class="submit" value="Remove Selected" /></td>
+            </tr>
             </tbody>
         </table>
-        <p>
-            
-        </p>
     }
 </body>
 </html>

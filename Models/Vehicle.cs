@@ -18,9 +18,11 @@ namespace RaceTrack.Models
         [Display(Name = "Vehicle Type")]
         public VehicleType VehicleType { get; set; }
 
+        public int TrackLimit { get => 5; }
+
         public virtual bool AllowOnTrack(int currentNumberOnTrack)
         {
-            return currentNumberOnTrack < 5;
+            return currentNumberOnTrack < TrackLimit;
         }
     }
 }

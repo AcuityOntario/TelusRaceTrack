@@ -33,7 +33,7 @@ namespace RaceTrack.Controllers
                     _raceTrackRepository.Remove(id);
                 }
             }
-            return View("Index");
+            return RedirectToAction("Index");
         }
     }
 }
